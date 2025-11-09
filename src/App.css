@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.navbar-brand img {
+  background-color: white;
+  border-radius: 8px; 
+  padding: 4px;      
+}
+
+.navbar-brand img {
+  height: clamp(30px, 15vw, 200px);
+  width: auto;
+}
