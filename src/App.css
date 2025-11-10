@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
@@ -50,4 +50,66 @@
 .navbar-brand img {
   height: clamp(30px, 15vw, 200px);
   width: auto;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8); /* statt 0.1 → 0.8 = 80 % sichtbar */
+   transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+.navbar-nav {
+  padding-right: 1rem;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 1); /* deckend weiß beim Scrollen */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+  color: white !important;      /* Textfarbe */
+  font-size: 1.5rem;            /* größer */
+  font-weight: 500;             /* etwas kräftiger */
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #e74c3c !important;
+}
+.navbar .nav-link.active {
+  color: #e74c3c !important;   
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.hero-section {
+  margin-top: 50px;
+  min-height: 80vh; /* Standard für Desktop */
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 60vh; /* kleinere Höhe für Smartphones */
+    background-position: top; /* Bild nach oben schieben, wirkt natürlicher */
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e; /* dunkles blau */
+  color: #f5f5f5;            /* hellgraue Standardschrift */
+}
+
+.donate-page {
+  min-height: 100vh;              /* füllt den Viewport */
+  background-color: #040b21;      /* dunkles Grau */
+  color: #f5f5f5;                 /* helle Schrift */
+  padding-top: 80px;            /* Platz für Navbar */
 }

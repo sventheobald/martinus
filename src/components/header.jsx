@@ -4,7 +4,7 @@ import logo from '../images/logo_final.png'
 
 function Header() {
         return (
-        <nav className="navbar navbar-expand-lg bg-light border border-3 border-danger">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-light fixed-top bg-transparent transition-navbar">
   <div className="container-fluid">
   <NavLink className="navbar-brand d-flex align-items-center" to="/">
   <img
@@ -20,7 +20,7 @@ function Header() {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
+      <ul className="navbar-nav ms-auto text-end">
       <li className="nav-item">
               <NavLink className="nav-link" to="/">Start</NavLink>
             </li>

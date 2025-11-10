@@ -11,7 +11,7 @@ export default function Home() {
         backgroundImage: `url(${hero})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        minHeight: '80vh', // Höhe des Abschnitts
+        minHeight: '80vh', 
       }}
     >
       <div className="card bg-light bg-opacity-75 p-4 shadow" style={{ maxWidth: '500px' }}>
