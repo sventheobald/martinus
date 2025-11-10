@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/header'
+import Footer from './components/footer.jsx'
 import Home from './pages/home.jsx'
 import Donate from './pages/donate.jsx'
 import About from './pages/about.jsx'
@@ -12,7 +13,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="container mt-4">
+      <main className="container-fluid mt-4 px-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/donate" element={<Donate />} />
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/impressum" element={<Impressum />} />
         </Routes>
       </main>
+    <Footer />
     </>
   )
 }

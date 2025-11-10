@@ -4,9 +4,9 @@ import logo from '../images/logo_final.png'
 
 function Header() {
         return (
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg bg-light border border-3 border-danger">
   <div className="container-fluid">
-  <a className="navbar-brand d-flex align-items-center" href="#">
+  <NavLink className="navbar-brand d-flex align-items-center" to="/">
   <img
     src={logo}
     alt="Logo"
@@ -14,8 +14,8 @@ function Header() {
     height="200"
     className="d-inline-block align-top me-2"
   />
+  </NavLink>
   
-</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
