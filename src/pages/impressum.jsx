@@ -1,3 +1,10 @@
 export default function Impressum() {
-    return <h1>Impressum</h1>
-  }
+  return (
+    <div className="impressum-page">
+      <div className="container py-5">
+        <h1 className="text-light mb-4">Impressum</h1>
+
+      </div>
+    </div>
+  )
+}

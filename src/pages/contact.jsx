@@ -1,3 +1,10 @@
 export default function Contact() {
-    return <h1>Kontakt</h1>
-  }
+  return (
+    <div className="contact-page">
+      <div className="container py-5">
+        <h1 className="text-light mb-4">Kontakt</h1>
+
+      </div>
+    </div>
+  )
+}
