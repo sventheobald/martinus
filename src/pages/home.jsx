@@ -1,5 +1,7 @@
 import React from 'react'
 import hero from '../images/girl_main.jpg'
+import team from '../images/team.png'
+import ImageGrid from '../components/ImageGrid.jsx'
 import teddy from '../images/teddy.jpg'
 import { useNavigate } from 'react-router-dom'
 
@@ -38,6 +40,40 @@ export default function Home() {
 
 <div style={{ backgroundColor: '#0b132b', height: '100px' }}></div>
 
+<section
+  className="container-fluid py-5 d-flex align-items-end pb-5"
+  style={{
+    backgroundImage: `url(${team})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '80vh',
+    color: 'white',
+    marginTop: '40px'
+  }}
+>
+  <div
+    className="position-absolute start-50 translate-middle-x"
+    style={{
+      backgroundColor: 'rgba(0, 0, 0, 0.55)',
+      padding: '2rem',
+      borderRadius: '0.75rem',
+      maxWidth: '720px',
+    }}
+  >
+    <h2 className="mb-2 fw-semibold fs-3 text-start">Wir helfen – Seite an Seite</h2>
+    <p className="fs-6 mb-0 text-start">
+      Gemeinsam mit engagierten Menschen auf der ganzen Welt bringen wir nicht nur Kleidung,
+      sondern auch Hoffnung und ein Lächeln dorthin, wo es am dringendsten gebraucht wird.
+    </p>
+    <button
+      className="btn"
+      style={{ backgroundColor: '#c0392b', color: '#fff', border: 'none' }}
+      onClick={() => navigate('/about')}
+    >
+      Mehr
+    </button>
+  </div>
+</section>
 
 <section
   className="hero-section d-flex align-items-end justify-content-end text-center position-relative"
@@ -46,6 +82,7 @@ export default function Home() {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     minHeight: '80vh',
+    marginTop: '40px'
   }}
 >
 
@@ -58,6 +95,7 @@ export default function Home() {
     backgroundColor: 'rgba(255, 255, 255, 0.6)', // halbtransparent wie oben
     backdropFilter: 'blur(4px)',                   // sanftes Glas-Gefühl (optional)
     border: 'none', 
+    marginTop: '40px'
     }}
   >
     <h2 className="h3 mb-3 text-dark">Kleidung schenkt Wärme.</h2>
@@ -71,21 +109,17 @@ export default function Home() {
         color: '#fff',
         border: 'none',
       }}
-      onClick={() => navigate('/donate')}
+      onClick={() => navigate('/contact')}
     >
-      Jetzt spenden
+      Kontaktieren Sie uns
     </button>
   </div>
 </section>
 
-      <section className="container py-5 text-start">
-        <h2 className="mb-4 text-light">Sektion2</h2>
-        <p className="text-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </section>
+      
 
-
+<section style={{ marginTop: '40px' }} ><ImageGrid />
+</section>
     </div>
   )
 }

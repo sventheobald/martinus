@@ -304,3 +304,35 @@ section p {
 section h2 {
   color: #f5f5f5;
 }
+
+.overlay-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.overlay-image {
+  transition: transform 0.4s ease;
+}
+
+.overlay-container:hover .overlay-image {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlay-container:hover .overlay-text {
+  opacity: 1;
+}
