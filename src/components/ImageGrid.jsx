@@ -30,25 +30,25 @@ function ImageGrid() {
         <div className="col-6 col-md-3 mb-3">
           <div className="position-relative overlay-container">
             <img src={img3} alt="Afghanistan" className="img-fluid rounded shadow-sm overlay-image" />
-            <div className="overlay-text">Afghanistan</div>
+            <div className="overlay-text">Malik aus Afghanistan</div>
           </div>
         </div>
         <div className="col-6 col-md-3 mb-3">
           <div className="position-relative overlay-container">
             <img src={img4} alt="Myanmar" className="img-fluid rounded shadow-sm overlay-image" />
-            <div className="overlay-text">Myanmar</div>
+            <div className="overlay-text">Anna-Mae aus Myanmar</div>
           </div>
         </div>
         <div className="col-6 col-md-3 mb-3">
           <div className="position-relative overlay-container">
             <img src={img5} alt="Venezuela" className="img-fluid rounded shadow-sm overlay-image" />
-            <div className="overlay-text">Venezuela</div>
+            <div className="overlay-text">Carlos aus Venezuela</div>
           </div>
         </div>
         <div className="col-6 col-md-3 mb-3">
           <div className="position-relative overlay-container">
             <img src={img6} alt="Syrien" className="img-fluid rounded shadow-sm overlay-image" />
-            <div className="overlay-text">Syrien</div>
+            <div className="overlay-text">Fatima aus Syrien</div>
           </div>
         </div>
       </div>
