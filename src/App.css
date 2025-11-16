@@ -619,3 +619,54 @@ body, .donate-page {
     transform: translateX(160px);
   }
 }
+
+/* Abholadresse kompakter & zentriert */
+.address-group {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* PLZ schön mittig und etwas "cleaner" */
+.address-group .col-md-4 .form-control {
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+/* Fehlermeldungen unter den Feldern */
+.address-group .invalid-feedback {
+  font-size: 0.85rem;
+}
+
+/* Step 3: Abholadresse – kompakte, saubere Felder */
+.address-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Straße */
+.address-wrapper .form-control {
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  font-size: 1.05rem;
+}
+
+/* PLZ mittig, schmaler */
+.address-zip {
+  max-width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+/* Fehlerhinweis */
+.invalid-feedback {
+  font-size: 0.85rem;
+  padding-left: 4px;
+}
+
+/* Input-Error-State schöner */
+.form-control.is-invalid {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 4px rgba(231, 76, 60, 0.4);
+}
