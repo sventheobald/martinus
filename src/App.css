@@ -770,10 +770,21 @@ body, .donate-page {
 }
 
 .contact-image {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  border: 2px solid rgba(255,255,255,0.3);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .contact-image {
+    margin-bottom: 1rem;
+    max-height: 200px;
+    width: 50%;
+    object-fit: cover;
+  
+    .contact-card {
+      padding: 1rem !important; /* etwas kompakter für Mobile */
+    }
+}
 }

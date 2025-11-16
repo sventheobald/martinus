@@ -2,7 +2,7 @@ import React from 'react'
 import hero from '../images/girl_main.jpg'
 import team from '../images/team.png'
 import ImageGrid from '../components/ImageGrid.jsx'
-import teddy from '../images/teddy.jpg'
+import martin from '../images/martin.png'
 import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
@@ -32,11 +32,7 @@ export default function Home() {
       Jetzt spenden
     </button>
       </div>
-      </section>
-
-      <div className="text-center position-absolute bottom-10 start-50 translate-middle-x mb-3">
-  <span className="text-light">▼</span>
-</div>      
+      </section>    
 
 <div style={{ backgroundColor: '#0b132b', height: '100px' }}></div>
 
@@ -45,10 +41,10 @@ export default function Home() {
   style={{
     backgroundImage: `url(${team})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'top',
     minHeight: '80vh',
     color: 'white',
-    marginTop: '40px'
+    marginTop: '30px'
   }}
 >
   <div
@@ -60,9 +56,9 @@ export default function Home() {
       maxWidth: '720px',
     }}
   >
-    <h2 className="mb-2 fw-semibold fs-3 text-start">Wir helfen – Seite an Seite</h2>
+    <h2 className="mb-2 fw-semibold fs-3 text-start">Gemeinsam helfen</h2>
     <p className="fs-6 mb-0 text-start">
-      Gemeinsam mit engagierten Menschen auf der ganzen Welt bringen wir nicht nur Kleidung,
+      Seite an Seite mit engagierten Menschen auf der ganzen Welt bringen wir nicht nur Kleidung,
       sondern auch Hoffnung und ein Lächeln dorthin, wo es am dringendsten gebraucht wird.
     </p>
     <button
@@ -78,9 +74,9 @@ export default function Home() {
 <section
   className="hero-section d-flex align-items-end justify-content-end text-center position-relative"
   style={{
-    backgroundImage: `url(${teddy})`,
+    backgroundImage: `url(${martin})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'top',
     minHeight: '80vh',
     marginTop: '40px'
   }}
@@ -98,9 +94,9 @@ export default function Home() {
     marginTop: '40px'
     }}
   >
-    <h2 className="h3 mb-3 text-dark">Kleidung schenkt Wärme.</h2>
+    <h2 className="h3 mb-3 text-dark">Sei wie Martin</h2>
     <p className="mb-3 text-muted">
-      Hilf mit – deine Spende bringt Menschen in Not ein Stück Geborgenheit zurück.
+      Deine Spende bringt Menschen in Not ein Stück Geborgenheit zurück.
     </p>
     <button
       className="btn"
@@ -111,7 +107,7 @@ export default function Home() {
       }}
       onClick={() => navigate('/contact')}
     >
-      Kontaktieren Sie uns
+      Kontaktiere uns
     </button>
   </div>
 </section>

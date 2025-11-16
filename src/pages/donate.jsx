@@ -371,9 +371,9 @@ export default function Donate() {
                   }}
                 >
                   <House size={50} className="mb-3" />
-                  <h5>Ich liefere selbst ab</h5>
+                  <h5>Ich liefere selbst</h5>
                   <p className="small text-muted">
-                    Du gibst deine Spende bei uns ab.
+                    Du gibst deine Spende bei unseren Abgabestellen ab.
                   </p>
                 </div>
               </div>
