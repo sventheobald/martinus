@@ -4,7 +4,7 @@ import img2 from '../images/ukraine.png'
 import img3 from '../images/afghanistan.png'
 import img4 from '../images/myanmar.png'
 import img5 from '../images/venezuela.png'
-import img6 from '../images/syria.png'
+import img6 from '../images/sudan.png'
 
 function ImageGrid() {
   return (
@@ -47,8 +47,8 @@ function ImageGrid() {
         </div>
         <div className="col-6 col-md-3 mb-3">
           <div className="position-relative overlay-container">
-            <img src={img6} alt="Syrien" className="img-fluid rounded shadow-sm overlay-image" />
-            <div className="overlay-text">Fatima aus Syrien</div>
+            <img src={img6} alt="Sudan" className="img-fluid rounded shadow-sm overlay-image" />
+            <div className="overlay-text">Die Zwillinge Nia und Losa aus dem Sudan</div>
           </div>
         </div>
       </div>

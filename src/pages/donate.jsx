@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Truck, House } from 'react-bootstrap-icons'
 import worldmap from '../images/world.png'
+import thankyou from '../images/thankyou.png'
 
 const REGIONS = [
   // Venezuela – passt
@@ -57,18 +58,18 @@ export default function Donate() {
     <div className="donate-page">
       <div className="container py-5">
 
-        {/* Fortschrittsbalken */}
-        <div className="mb-4">
-          <div className="progress" style={{ height: '8px' }}>
-            <div
-              className="progress-bar bg-danger"
-              style={{ width: `${(step / totalSteps) * 100}%` }}
-            ></div>
-          </div>
-          <p className="text-center mt-2 text-muted">
-            Schritt {step} von {totalSteps}
-          </p>
-        </div>
+        {/* Fortschrittsbalken in weißer Card */}
+<div className="step-header mb-4">
+  <div className="progress" style={{ height: '8px' }}>
+    <div
+      className="progress-bar bg-danger"
+      style={{ width: `${(step / totalSteps) * 100}%` }}
+    ></div>
+  </div>
+  <p className="text-center mt-2 text-muted">
+    Schritt {step} von {totalSteps}
+  </p>
+</div>
 
         {/* STEP 1 – Krisengebiet wählen (Weltkarte) */}
 {step === 1 && (
@@ -153,7 +154,7 @@ export default function Donate() {
                   <House size={50} className="mb-3" />
                   <h5>Ich liefere selbst ab</h5>
                   <p className="small text-muted">
-                    Du bringst deine Spende zu einer Sammelstelle in deiner Nähe.
+                    Du gibst deine Spende bei uns ab.
                   </p>
                 </div>
               </div>
@@ -161,7 +162,7 @@ export default function Donate() {
 
             <div className="d-flex justify-content-between mt-4">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-back"
                 onClick={() => setStep(1)}
               >
                 Zurück
@@ -178,7 +179,7 @@ export default function Donate() {
               Bitte gib die Abholadresse an. Die PLZ sollte im gleichen Bereich liegen wie unsere Geschäftsstelle.
             </p>
 
-            <div className="mb-3">
+            <div className="mb-2 plz-input">
               <label className="form-label">Straße & Hausnummer *</label>
               <input
                 type="text"
@@ -225,7 +226,7 @@ export default function Donate() {
 
             <div className="d-flex justify-content-between mt-4">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-back"
                 onClick={() => setStep(2)}
               >
                 Zurück
@@ -253,7 +254,7 @@ export default function Donate() {
               Wir schlagen dir Sammelstellen im gleichen PLZ-Bereich vor (gleiche ersten zwei Ziffern).
             </p>
 
-            <div className="mb-2">
+            <div className="mb-2 plz-input text-center">
               <label className="form-label">PLZ *</label>
               <input
                 type="text"
@@ -271,7 +272,7 @@ export default function Donate() {
 
             <div className="d-flex justify-content-between mt-4">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-back"
                 onClick={() => setStep(2)}
               >
                 Zurück
@@ -323,7 +324,7 @@ export default function Donate() {
 
             <div className="d-flex justify-content-between mt-4">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-back"
                 onClick={() => setStep(3)}
               >
                 Zurück
@@ -371,7 +372,7 @@ export default function Donate() {
 
             <div className="d-flex justify-content-between mt-3">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-back"
                 onClick={() => setStep(3)}
               >
                 Zurück
@@ -388,57 +389,51 @@ export default function Donate() {
           </div>
         )}
 
-        {/* STEP 5 – Danke / Abschluss */}
-        {step === 5 && (
-          <div className="step-card text-center">
-            <h2 className="h3 mb-3">Danke für deine Kleiderspende!</h2>
-            <p className="text-muted mb-4">
-              Deine Registrierung ist bei uns eingegangen. Wir bereiten alles vor, damit deine Spende sicher im Krisengebiet ankommt.
-            </p>
+{step === 5 && (
+  <div className="step-card-final text-center">
+    <h2 className="h3 mb-3">Danke für deine Kleiderspende!</h2>
+    <p className="text-muted mb-4">
+      Deine Registrierung ist bei uns eingegangen. Wir kümmern uns darum, 
+      dass deine Spende sicher im Krisengebiet ankommt.
+    </p>
 
-            <div className="mb-4">
-              {/* Platz für ein Dankesbild */}
-              <div
-                style={{
-                  width: '100%',
-                  borderRadius: '12px',
-                  background: 'linear-gradient(135deg, #c0392b, #8e44ad)',
-                  padding: '3rem 1rem',
-                  color: '#fff',
-                }}
-              >
-                <p className="mb-0">
-                  „Jedes Paket Wärme macht einen Unterschied.“
-                </p>
-              </div>
-            </div>
+    {/* Bild statt roter Card */}
+    <div className="thankyou-image-wrapper mb-4">
+      <img 
+        src={thankyou} 
+        alt="Danke" 
+        className="final-image"
+      />
+    </div>
 
-            <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mb-4">
-              <a href="#" className="btn btn-outline-light">
-                Vorbereitungsanleitung (PDF)
-              </a>
-              <a href="#" className="btn btn-outline-light">
-                Kalendereintrag herunterladen
-              </a>
-            </div>
+    <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mb-4">
+      <a href="#" className="btn btn-outline-dark">
+        Vorbereitungsanleitung (PDF)
+      </a>
+      <a href="#" className="btn btn-outline-dark">
+        Kalendereintrag herunterladen
+      </a>
+    </div>
 
-            <button
-              className="btn btn-light"
-              onClick={() => {
-                setStep(1)
-                setSelectedRegion('')
-                setPickupType('')
-                setSelectedAddress('')
-                setAbholAdresse({ street: '', zip: '', city: '' })
-                setPlzLieferung('')
-                setDate('')
-                setTimeWindow('')
-              }}
-            >
-              Neue Spende registrieren
-            </button>
-          </div>
-        )}
+    <button
+    
+      className="btn"
+      style={{ backgroundColor: '#c0392b', color: '#fff' }}
+      onClick={() => {
+        setStep(1)
+        setSelectedRegion('')
+        setPickupType('')
+        setSelectedAddress('')
+        setAbholAdresse({ street: '', zip: '', city: '' })
+        setPlzLieferung('')
+        setDate('')
+        setTimeWindow('')
+      }}
+    >
+      Neue Spende registrieren
+    </button>
+  </div>
+)}
       </div>
     </div>
   )
