@@ -4,12 +4,12 @@ import worldmap from '../images/world.png'
 import thankyou from '../images/thankyou.png'
 
 const REGIONS = [
-  { id: 'venezuela', label: 'Venezuela', x: '32%', y: '58%' },
-  { id: 'gaza', label: 'Gaza', x: '50.7%', y: '48%' },
-  { id: 'sudan', label: 'Sudan', x: '52%', y: '54%' },
-  { id: 'ukraine', label: 'Ukraine', x: '55%', y: '42%' },
-  { id: 'afghanistan', label: 'Afghanistan', x: '60%', y: '46%' },
-  { id: 'myanmar', label: 'Myanmar', x: '68%', y: '55%' },
+  { id: 'venezuela', label: 'Venezuela', x: '29%', y: '54%' },
+  { id: 'gaza', label: 'Gaza', x: '56.8%', y: '44.3%' },
+  { id: 'sudan', label: 'Sudan', x: '54%', y: '50%' },
+  { id: 'ukraine', label: 'Ukraine', x: '62%', y: '38%' },
+  { id: 'afghanistan', label: 'Afghanistan', x: '66%', y: '45%' },
+  { id: 'myanmar', label: 'Myanmar', x: '74%', y: '50%' },
 ]
 
 // einfache „Geschäftsstelle“-PLZ (für Präfix-Check bei Abholung)
@@ -58,9 +58,9 @@ const CLOTHING_ITEMS = [
 function getSuggestedAddresses(zipPrefix) {
   const p = zipPrefix || '12'
   return [
-    `${p}345 – Kleiderkammer ${p}-Nord, Beispielstraße 12`,
-    `${p}678 – Sozialzentrum ${p}-Mitte, Musterallee 5`,
-    `${p}901 – Notlager ${p}-Süd, Bergstraße 40`,
+    `${p}345 – Kleiderkammer Waldheim, Goetheweg 12a`,
+    `${p}678 – Sozialzentrum Berghausen, Eschenallee 5`,
+    `${p}901 – Notlager Burgstadt-Ost, Burgenstraße 40`,
   ]
 }
 
