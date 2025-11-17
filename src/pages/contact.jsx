@@ -31,16 +31,16 @@ export default function Contact() {
               {/* Infos */}
             
 
-              <p className="text-light mb-2">
-                📧 <strong>Email:</strong> spenden@martinus.de
+              <p className="text-light mb-2 ">
+                 <strong>Email:</strong> spenden@martinus.de
               </p>
 
               <p className="text-light mb-2">
-                ☎️ <strong>Telefon:</strong> 0761 / 32 16 8
+                <strong>Telefon:</strong> 0761 / 32 16 8
               </p>
 
               <p className="text-light mb-4">
-                📍 <strong>Adresse:</strong><br />
+                <strong>Adresse:</strong><br />
                 Waldstraße 12, 79104 Freiburg
               </p>
 
@@ -50,7 +50,7 @@ export default function Contact() {
 
             </div>
 
-            {/* 🔴 RECHTS (Formular) */}
+            {/* RECHTS (Formular) */}
             <div className="col-md-8">
               <form>
                 <div className="row g-3">

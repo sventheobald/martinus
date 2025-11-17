@@ -8,8 +8,16 @@ import img6 from '../images/sudan.png'
 
 function ImageGrid() {
   return (
+
+    
     <section className="container py-5">
       {/* Oben: 2 große Bilder */}
+      <div className="text-center mb-5">
+  <h2 className="text-white fw-bold">Unsere Hilfe in Bildern</h2>
+  <p className="text-light mt-2">
+    Eindrücke aus den Projekten, die wir mit deiner Unterstützung erreichen.
+  </p>
+</div>
       <div className="row mb-4">
         <div className="col-md-6 mb-3 mb-md-0">
           <div className="position-relative overlay-container">

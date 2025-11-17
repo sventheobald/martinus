@@ -96,7 +96,7 @@ export default function Home() {
   >
     <h2 className="h3 mb-3 text-dark">Sei wie Martin</h2>
     <p className="mb-3 text-muted">
-      Deine Spende bringt Menschen in Not ein Stück Geborgenheit zurück.
+      Werde Teil unseres Teams und helfe, wo es am Nötigsten ist.
     </p>
     <button
       className="btn"
@@ -112,7 +112,7 @@ export default function Home() {
   </div>
 </section>
 
-      
+
 
 <section style={{ marginTop: '40px' }} ><ImageGrid />
 </section>

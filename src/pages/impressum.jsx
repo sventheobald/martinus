@@ -12,17 +12,17 @@ export default function Impressum() {
     <p className="text-light mb-2">Waldstraße 12<br />79104 Freiburg</p>
 
     <p className="text-light mb-2">
-      📧 <strong>Email:</strong> spenden@martinus.de
+       <strong>Email:</strong> spenden@martinus.de
     </p>
 
     <p className="text-light mb-2">
-      ☎️ <strong>Telefon:</strong> 0761 / 32 16 8
+       <strong>Telefon:</strong> 0761 / 32 16 8
     </p>
 
     <h4 className="text-white mt-4 mb-2">Vertreten durch</h4>
     <p className="text-light mb-4">
-      1. Vorsitzende/r: Max Mustermann<br />
-      2. Vorsitzende/r: Amira Musterfrau
+      1. Vorsitzender: Max Mustermann<br />
+      2. Vorsitzende: Amira Musterfrau
     </p>
 
     <h4 className="text-white mb-2">Vereinsregister</h4>
