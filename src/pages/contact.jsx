@@ -13,22 +13,18 @@ export default function Contact() {
           Wir freuen uns auf deine Nachricht.
         </p>
 
-        {/* Haupt-Contact-Card */}
         <div className="contact-card p-4 p-md-5">
 
           <div className="row g-4 align-items-start">
 
-            {/* 🔵 LINKER BLOCK (Bild + Infos) */}
             <div className="col-md-4 text-center text-md-start">
 
-              {/* Bild */}
+
               <img 
                 src={contactImg}
                 alt="Kontakt"
                 className="contact-image mb-3"
               />
-
-              {/* Infos */}
             
 
               <p className="text-light mb-2 ">
@@ -50,7 +46,7 @@ export default function Contact() {
 
             </div>
 
-            {/* RECHTS (Formular) */}
+          
             <div className="col-md-8">
               <form>
                 <div className="row g-3">

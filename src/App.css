@@ -4,6 +4,11 @@
   padding: 0;
   text-align: center;
 }
+
+.underline {
+  text-decoration: underline;
+}
+
 .brand-logo {
   height: 120px;
   width: auto;
@@ -15,7 +20,7 @@
 }
 
 .brand-logo--small {
-  height: 100px; /* kleiner beim Scrollen */
+  height: 100px; 
   transform: translateY(5px);
 }
 
@@ -29,9 +34,9 @@
 
 .logo-dropdown {
   position: absolute;
-  top: 100%; /* direkt unter dem Logo */
+  top: 100%;
   left: 0;
-  background-color: #0b132b;  /* dunkles Blau */
+  background-color: #0b132b;  
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   padding: 0.5rem 0;
@@ -48,7 +53,7 @@
 .logo-dropdown li a {
   display: block;
   padding: 0.5rem 1rem;
-  background-color: transparent; /* kein Hintergrund */
+  background-color: transparent; 
   color: #f5f5f5;
   text-decoration: none;
   transition: color 0.25s ease;
@@ -60,17 +65,17 @@
 }
 
 .logo-dropdown li a:hover {
-  background-color: transparent !important; /* kein Hintergrund */
-  color: #e74c3c !important;                /* nur Schrift wird rot */
+  background-color: transparent !important; 
+  color: #e74c3c !important;                
 }
 
-/* Dropdown nur beim Hover sichtbar */
+
 #logo-area:hover .logo-dropdown {
   display: block;
   animation: dropdownFade 0.25s ease;
 }
 
-/* sanfter Fade-In */
+
 @keyframes dropdownFade {
   from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -109,7 +114,7 @@
 
 
 .navbar {
-  background-color: rgba(11, 19, 43, 0.95); /* dein dunkles Blau fast Schwarz */
+  background-color: rgba(11, 19, 43, 0.95); 
   transition: opacity .4s ease, transform .4s ease;
 }
 .navbar-nav {
@@ -144,7 +149,7 @@
 .nav-section--hidden {
   background: transparent !important;
 }
-/* Navbar-Container selbst transparent, Logo bleibt */
+
 .navbar.navbar--logo-only {
   background: transparent !important;
   box-shadow: none !important;
@@ -156,14 +161,14 @@
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 1); /* deckend weiß beim Scrollen */
+  background-color: rgba(255, 255, 255, 1); 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .nav-link {
-  color: white !important;      /* Textfarbe */
-  font-size: 1.5rem;            /* größer */
-  font-weight: 500;             /* etwas kräftiger */
+  color: white !important;      
+  font-size: 1.5rem;            
+  font-weight: 500;            
   transition: color 0.3s ease;
 }
 
@@ -191,13 +196,13 @@
 .hero-section {
   padding-top: 100px;
 }
-/* Erzwingt halbtransparentes Card-Glas trotz Bootstrap */
+
 .hero-card {
-  --bs-card-bg: transparent;                     /* Bootstrap-Variable neutralisieren */
+  --bs-card-bg: transparent;                     
   background-color: rgba(255, 255, 255, 0.6) !important;
   backdrop-filter: blur(4px);
   border: none;
-  z-index: 2;                                    /* sicher über dem Hintergrund */
+  z-index: 2;                                   
   position: relative;
   
 }
@@ -205,12 +210,12 @@
 @media (max-width: 576px) {
   .hero-section {
     margin-top: 0;
-    min-height: 60vh; /* kleinere Höhe für Smartphones */
-    background-position: top; /* Bild nach oben schieben, wirkt natürlicher */
+    min-height: 60vh; 
+    background-position: top; 
   }
 }
 
-/* Desktop (>=992px): Standardverhalten */
+
 @media (min-width: 992px) {
   .navbar-collapse {
     position: static;
@@ -222,23 +227,23 @@
   }
 }
 
-/* Mobile (<992px): Panel rechts unter dem Toggler */
+
 @media (max-width: 991.98px) {
   .nav-section { position: relative; }  
   .navbar-collapse {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 260px;                                 /* schmal */
-    background-color: #0b132b;                    /* dunkles Blau */
+    width: 260px;                                 
+    background-color: #0b132b;                    
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     padding: 1rem 1.25rem;
   }
-  /* Bootstrap versteckt collapse per display:none – das behalten */
+  
   .navbar-collapse.collapse:not(.show) { display: none; }
 
-  /* Links im Panel */
+  
   .navbar-collapse .nav-link {
     color: #f5f5f5 !important;
     padding: .5rem .75rem;
@@ -247,8 +252,8 @@
     transition: background .25s ease;
   }
   .navbar-collapse .nav-link:hover {
-    background-color: transparent;     /* kein Hintergrund */
-    color: #e74c3c !important;         /* nur Schrift rot */
+    background-color: transparent;     
+    color: #e74c3c !important;         
   }
 }
 
@@ -256,39 +261,39 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #0b132b; /* dunkles blau */
-  color: #f5f5f5;            /* hellgraue Standardschrift */
+  background-color: #0b132b; 
+  color: #f5f5f5;            
 }
 
 .donate-page {
-  min-height: 100vh;              /* füllt den Viewport */
-  background-color: #040b21;      /* dunkles Grau */
-  color: #f5f5f5;                 /* helle Schrift */
-  padding-top: 140px;            /* Platz für Navbar */
+  min-height: 100vh;              
+  background-color: #040b21;      
+  color: #f5f5f5;                 
+  padding-top: 140px;            
   background-image: url('/src/images/donation_background.jpg');
-  background-size: cover;      /* füllt den Bereich */
-  background-position: center 100px; /* schön zentriert */
+  background-size: cover;      
+  background-position: center 100px; 
 }
 
 .impressum-page {
-  min-height: 100vh;              /* füllt den Viewport */
-  background-color: #040b21;      /* dunkles Grau */
-  color: #f5f5f5;                 /* helle Schrift */
-  padding-top: 80px;            /* Platz für Navbar */
+  min-height: 100vh;              
+  background-color: #040b21;      
+  color: #f5f5f5;                 
+  padding-top: 80px;            
 }
 
 .contact-page {
-  min-height: 100vh;              /* füllt den Viewport */
-  background-color: #040b21;      /* dunkles Grau */
-  color: #f5f5f5;                 /* helle Schrift */
-  padding-top: 80px;            /* Platz für Navbar */
+  min-height: 100vh;              
+  background-color: #040b21;      
+  color: #f5f5f5;                 
+  padding-top: 80px;            
 }
 
 .about-page {
-  min-height: 100vh;              /* füllt den Viewport */
-  background-color: #040b21;      /* dunkles Grau */
-  color: #f5f5f5;                 /* helle Schrift */
-  padding-top: 80px;            /* Platz für Navbar */
+  min-height: 100vh;              
+  background-color: #040b21;      
+  color: #f5f5f5;                 
+  padding-top: 80px;            
 }
 
 html {
@@ -296,7 +301,7 @@ html {
 }
 
 section {
-  background-color: #0b132b; /* dunkles Blau-Schwarz */
+  background-color: #0b132b; 
 }
 
 section .lead,
@@ -372,8 +377,8 @@ section h2 {
 
 .card,
 .step-card {
-  background-color: rgba(255, 255, 255, 0.5) !important; /* 50% transparent */
-  backdrop-filter: blur(4px); /* edler Glas-Effekt */
+  background-color: rgba(255, 255, 255, 0.5) !important; 
+  backdrop-filter: blur(4px); 
   border: none !important;
 }
 
@@ -384,10 +389,10 @@ section h2 {
 }
 
 body, .donate-page {
-  background-color: #0b132b !important; /* dein dunkles Blau */
+  background-color: #0b132b !important; 
 }
 
-/* weiße Step-Card auf dunklem Hintergrund */
+
 .step-card {
   background: #ffffff;
   border-radius: 12px;
@@ -402,38 +407,29 @@ body, .donate-page {
   padding: 1rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  max-width: 900px;       /* gleiche Breite wie Cards */
-  margin: 0 auto;         /* sauber zentrieren */
+  max-width: 900px;       
+  margin: 0 auto;         
 }
 
-/* Weltkarte – dunkler Hintergrund, auch ohne Bild nutzbar */
+
 .world-map {
   width: 100%;
   height: 100%;
-  object-fit: contain;       /* NICHT zuschneiden */
-  object-position: top;      /* Karte rutscht nach oben */
+  object-fit: contain;       
+  object-position: top;      
 }
 
-/* Wenn du später ein echtes Kartenbild hast:
-.world-map {
-  background-image: url(/dein-kartenbild.png);
-  background-size: cover;
-  background-position: center;
-}
-*/
-
-/* rote Punkte */
 .map-dot {
   position: absolute;
   width: 16px;
   height: 16px;
-  border-radius: 50%;                /* kreisförmig */
+  border-radius: 50%;                
   background: #e74c3c;
   border: 2px solid #ffffff;
   transform: translate(-50%, -50%);
   cursor: pointer;
   box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
-  padding: 0;                        /* keine Pillen mehr */
+  padding: 0;                        
 }
 
 .map-dot:hover {
@@ -446,7 +442,7 @@ body, .donate-page {
   box-shadow: 0 0 14px rgba(231, 76, 60, 1);
 }
 
-/* Label unten in der Karte */
+
 .map-label {
   position: absolute;
   left: 50%;
@@ -459,7 +455,7 @@ body, .donate-page {
   font-size: 0.9rem;
 }
 
-/* Auswahlkarten (weiß) */
+
 .select-card {
   background: #ffffff;
   border-radius: 12px;
@@ -495,18 +491,18 @@ body, .donate-page {
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  background: #f5f5f5; /* Rahmenfarbe hinter dem Bild */
+  background: #f5f5f5; 
 }
 
 .world-map-image {
   display: block;
   width: 100%;
-  height: auto;     /* wichtig: kein Beschnitt, Bild bestimmt Höhe */
+  height: auto;     
   object-fit: contain;
 }
 
 .map-card {
-  padding-top: 1rem !important;   /* weniger Abstand oben */
+  padding-top: 1rem !important;   
   padding-bottom: 2rem;
 }
 
@@ -527,7 +523,7 @@ body, .donate-page {
   margin: 0 auto;
   overflow: hidden;
   display: flex;
-  align-items: flex-start;  /* wichtig → Bild oben */
+  align-items: flex-start;  
   justify-content: center;
 }
 
@@ -558,7 +554,7 @@ body, .donate-page {
 }
 
 .thankyou-image-wrapper {
-  max-width: 420px;        /* kleine, saubere Größe */
+  max-width: 420px;       
   margin: 0 auto 2rem;     
 }
 
@@ -568,17 +564,17 @@ body, .donate-page {
   object-fit: contain;
   border-radius: 12px;
   display: block;
-  transform: none !important;   /* überschreibt alte Verschiebungen */
+  transform: none !important;   
 }
 
-/* --- STEP 5 (Danke) Card --- */
+
 .step-card-final {
-  width: fit-content;               /* Card ist so breit wie ihr Inhalt */
-  max-width: 1200px;                /* Sicherheit */
-  margin: 2rem auto;                /* perfekt zentriert */
+  width: fit-content;               
+  max-width: 1200px;                
+  margin: 2rem auto;                
   background: #ffffff;
   border-radius: 16px;
-  padding: 2rem 2.5rem;             /* gleicher Abstand ringsherum */
+  padding: 2rem 2.5rem;             
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   text-align: center;
 }
@@ -588,7 +584,7 @@ body, .donate-page {
   height: auto;
 }
 
-/* Buttons in Schritt 5 */
+
 .step-card-final .btn {
   padding: 0.65rem 1.5rem;
   font-size: 1.1rem;
@@ -602,46 +598,46 @@ body, .donate-page {
 }
 
 .final-image {
-  transform: translateX(100px); /* nach rechts verschieben */
+  transform: translateX(100px); 
 }
-  /* Nur auf großen Bildschirmen leicht nach rechts schieben */
+  
 @media (min-width: 992px) {
   .final-image {
     transform: translateX(160px);
   }
 }
 
-/* Abholadresse kompakter & zentriert */
+
 .address-group {
   max-width: 720px;
   margin: 0 auto;
 }
 
-/* PLZ schön mittig und etwas "cleaner" */
+
 .address-group .col-md-4 .form-control {
   text-align: center;
   letter-spacing: 0.08em;
 }
 
-/* Fehlermeldungen unter den Feldern */
+
 .address-group .invalid-feedback {
   font-size: 0.85rem;
 }
 
-/* Step 3: Abholadresse – kompakte, saubere Felder */
+
 .address-wrapper {
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* Straße */
+
 .address-wrapper .form-control {
   border-radius: 10px;
   padding: 0.65rem 1rem;
   font-size: 1.05rem;
 }
 
-/* PLZ mittig, schmaler */
+
 .address-zip {
   max-width: 150px;
   margin: 0 auto;
@@ -650,20 +646,18 @@ body, .donate-page {
   letter-spacing: 0.04em;
 }
 
-/* Fehlerhinweis */
 .invalid-feedback {
   font-size: 0.85rem;
   padding-left: 4px;
 }
 
-/* Input-Error-State schöner */
+
 .form-control.is-invalid {
   border-color: #e74c3c !important;
   box-shadow: 0 0 4px rgba(231, 76, 60, 0.4);
 }
 
 
-/* Horizontale Teamkarte */
 .team-horizontal-card {
   background: rgba(255,255,255,0.08);
   border-radius: 14px;
@@ -671,7 +665,6 @@ body, .donate-page {
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* Team-Bild links */
 .team-horizontal-img {
   width: 100%;
   max-width: 180px;
@@ -680,7 +673,6 @@ body, .donate-page {
   box-shadow: 0 4px 14px rgba(0,0,0,0.3);
 }
 
-/* Mobile Layout */
 @media (max-width: 768px) {
   .team-horizontal-img {
     max-width: 160px;
@@ -697,15 +689,12 @@ body, .donate-page {
   padding-top: 0;
 }
 
-
-/* Grundseite */
 .about-page {
-  background-color: #0b132b; /* dunkles Blau */
+  background-color: #0b132b; 
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Banner oben */
 .about-hero {
   width: 100%;
   height: 450px;
@@ -718,9 +707,8 @@ body, .donate-page {
   border-bottom: 3px solid rgba(255,255,255,0.1);
 }
 
-/* Team Cards */
 .team-card {
-  background: rgba(10, 20, 50, 0.85); /* dunkel, leicht transparent */
+  background: rgba(10, 20, 50, 0.85); 
   border-radius: 16px;
   color: white;
   max-width: 900px;
@@ -728,7 +716,6 @@ body, .donate-page {
   backdrop-filter: blur(4px);
 }
 
-/* Team Fotos */
 .team-photo {
   width: 100%;
   max-width: 210px;
@@ -736,19 +723,18 @@ body, .donate-page {
   box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
-/* Text */
 .team-name {
   color: #ffffff;
   margin-bottom: 0.3rem;
 }
 
 .team-role {
-  color: #e74c3c; /* rot für Rollen */
+  color: #e74c3c; 
   margin-bottom: 1rem;
 }
 
 .team-text {
-  color: #e0e4f0; /* angenehmes hellgrau */
+  color: #e0e4f0; 
   font-size: 1.05rem;
   line-height: 1.5;
 }
@@ -775,7 +761,7 @@ body, .donate-page {
     object-fit: cover;
   
     .contact-card {
-      padding: 1rem !important; /* etwas kompakter für Mobile */
+      padding: 1rem !important; 
     }
 }
 }
@@ -847,9 +833,6 @@ body, .donate-page {
 .checkout-icon-title svg {
   width: 26px;
   height: 26px;
-  color: #c0392b; /* Rot-Akzent */
+  color: #c0392b; 
 }
 
-.underline {
-  text-decoration: underline;
-}

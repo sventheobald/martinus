@@ -36,7 +36,7 @@ export default function AboutUs() {
 
   return (
     <div className="about-page">
-      {/* Banner oben */}
+    
       <div className="about-hero"></div>
 
       <div className="container pb-5">
@@ -47,12 +47,12 @@ export default function AboutUs() {
         {TEAM.map((p, index) => (
           <div className="team-card row align-items-center mx-auto mb-5 p-4" key={index}>
             
-            {/* Bild links */}
+            
             <div className="col-md-4 text-center mb-3 mb-md-0">
               <img src={p.img} alt={p.name} className="team-photo" />
             </div>
 
-            {/* Text rechts */}
+            
             <div className="col-md-8">
               <h3 className="team-name">{p.name}</h3>
               <h5 className="team-role">{p.role}</h5>

@@ -5,10 +5,10 @@ export default function Footer() {
     <footer className="footer bg-darkblue text-dark mt-5 pt-5 pb-4">
       <div className="container">
 
-        {/* Grid: 3 Spalten */}
+        {/* Grid mit 3 Flächen */}
         <div className="row">
 
-          {/* 1. Spalte – Kontakt */}
+          {/* 1. Spalte: Kontakt */}
           <div className="col-md-4 mb-4">
             <h5 className="text-dark mb-3">Kontakt</h5>
 
@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* 2. Spalte – Öffnungszeiten */}
+          {/* 2. Spalte: Öffnungszeiten */}
           <div className="col-md-4 mb-4">
             <h5 className="text-dark mb-3">Öffnungszeiten</h5>
 
@@ -38,7 +38,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* 3. Spalte – Navigation */}
+          {/* 3. Spalte: Navigation */}
           <div className="col-md-4 mb-4">
             <h5 className="text-dark mb-3">Navigation</h5>
 
@@ -63,7 +63,7 @@ export default function Footer() {
 
         </div>
 
-        {/* Linie + Copyright */}
+        {/*rechtehinweis*/}
         <hr className="border-secondary mt-4" />
 
         <p className="text-center text-muted small mt-3 mb-0">

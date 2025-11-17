@@ -11,7 +11,6 @@ function ImageGrid() {
 
     
     <section className="container py-5">
-      {/* Oben: 2 große Bilder */}
       <div className="text-center mb-5">
   <h2 className="text-white fw-bold">Unsere Hilfe in Bildern</h2>
   <p className="text-light mt-2">
@@ -33,7 +32,7 @@ function ImageGrid() {
         </div>
       </div>
 
-      {/* Unten: 4 kleinere Bilder */}
+      
       <div className="row">
         <div className="col-6 col-md-3 mb-3">
           <div className="position-relative overlay-container">

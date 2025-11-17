@@ -4,10 +4,10 @@ import worldmap from '../images/world.png'
 import thankyou from '../images/thankyou.png'
 
 
-// Geschäftsstelle (79*)
+// Geschäftsstelle PLZ wird vordefiniert(79*)
 const OFFICE_ZIP_PREFIX = '79'
 
-// Standard Abgabeadresse
+// Standard Geschäftsadresse 
 const LIEFERUNGS_ADRESSE = {
   street: 'Waldstraße',
   houseNumber: '12',
@@ -24,7 +24,7 @@ const REGIONS = [
   { id: 'myanmar', label: 'Myanmar', x: '74%', y: '50%' },
 ]
 
-// Kleidungsauswahl für Schritt 2
+// Kleidungsauswahl für Step 2
 const CLOTHING_ITEMS = [
   { id: 'jacken', label: 'Winterjacken', description: 'Gefütterte Jacken für kalte Nächte.' },
   { id: 'pullover', label: 'Pullover', description: 'Warme Oberteile für den Alltag.' },
@@ -37,7 +37,7 @@ const CLOTHING_ITEMS = [
 const TOTAL_STEPS = 8
 
 export default function Donate() {
-  // --- STATE ---
+  //State Definitionen
   const [step, setStep] = useState(1)
   const [selectedRegion, setSelectedRegion] = useState('')
   const [clothing, setClothing] = useState({
@@ -50,7 +50,7 @@ export default function Donate() {
   })
   const [clothingError, setClothingError] = useState('')
   const [plz, setPlz] = useState('')
-  const [pickupType, setPickupType] = useState('') // 'abholung' | 'lieferung'
+  const [pickupType, setPickupType] = useState('') 
   const [abholAdresse, setAbholAdresse] = useState({
     firstName: "",
     lastName: "",
@@ -72,9 +72,13 @@ export default function Donate() {
 
   const [date, setDate] = useState('')
   const [timeWindow, setTimeWindow] = useState('')
-  const [dateError, setDateError] = useState('') // aktuell nicht genutzt, kannst du später für Termin-Validierung nehmen
+  const [dateError, setDateError] = useState('') 
+  
+  {dateError && (
+    <div className="invalid-feedback d-block">{dateError}</div>
+  )}
 
-  // --- HELPER ---
+  // Helper Funktionen
   const hasClothing = Object.values(clothing).some(v => v > 0)
   const zipPrefix = plz.slice(0, 2)
   const canPickup = zipPrefix === OFFICE_ZIP_PREFIX
@@ -113,7 +117,7 @@ export default function Donate() {
       newErrors.lastName = "Nachname enthält unzulässige Zeichen.";
     }
   
-    // Telefon (optional → aber wenn ausgefüllt, prüfen)
+    // Telefon
     if (phone.trim() && !/^[0-9+\-\s()]{5,20}$/.test(phone.trim())) {
       newErrors.phone = "Bitte eine gültige Telefonnummer eingeben.";
     }
@@ -167,11 +171,11 @@ export default function Donate() {
     const d = new Date(isoDate);
     return d.toLocaleDateString("de-DE");
   };
-  // --- RENDER ---
+  //Render Funktion
   return (
     <div className="donate-page">
       <div className="container py-5">
-        {/* Fortschrittsanzeige */}
+        {/* Progress Balken */}
         <div className="step-header mb-4">
           <div className="progress" style={{ height: '8px' }}>
             <div
@@ -184,7 +188,7 @@ export default function Donate() {
           </p>
         </div>
 
-        {/* -------------------------------- STEP 1 -------------------------------- */}
+        {/* 1.Step */}
         {step === 1 && (
           <div className="card p-3 map-card">
             <h2 className="h4 text-center mb-2">
@@ -225,7 +229,7 @@ export default function Donate() {
           </div>
         )}
 
-        {/* -------------------------------- STEP 2 -------------------------------- */}
+        {/* 2.Step */}
         {step === 2 && (
           <div className="step-card">
             <h2 className="h4 text-center mb-3">Was möchtest du spenden?</h2>
@@ -286,7 +290,7 @@ export default function Donate() {
           </div>
         )}
 
-        {/* -------------------------------- STEP 3 (PLZ) -------------------------------- */}
+        {/* 3.Step */}
         {step === 3 && (
           <div className="step-card">
             <h2 className="h4 text-center mb-3">Wo befindest du dich?</h2>
@@ -324,7 +328,7 @@ export default function Donate() {
           </div>
         )}
 
-        {/* -------------------------------- STEP 4 (Übergabeart) -------------------------------- */}
+        {/* 4.Step */}
         {step === 4 && (
           <div className="step-card">
             <h2 className="h4 text-center mb-4">
@@ -356,7 +360,7 @@ export default function Donate() {
                   className="select-card"
                   onClick={() => {
                     setPickupType('lieferung')
-                    setStep(6) // direkt zur Übersicht
+                    setStep(6) 
                   }}
                 >
                   <House size={50} className="mb-3" />
@@ -382,13 +386,13 @@ export default function Donate() {
           </div>
         )}
 
-        {/* -------------------------------- STEP 5 (Abholadresse) -------------------------------- */}
+        {/* Step 5 */}
         {step === 5 && pickupType === 'abholung' && (
           <div className="step-card">
             <h2 className="h4 mb-3 text-center">
               Wo sollen wir die Spende abholen?
             </h2>
-{/* Vor- & Nachname */}
+{/* Eingabe User zu Namen */}
 <div className="row g-3 mb-3">
   <div className="col-md-6">
     <label className="form-label">Vorname *</label>
@@ -417,7 +421,7 @@ export default function Donate() {
   </div>
 </div>
 
-{/* Optional: Telefon */}
+{/* Telefoneingabe */}
 <div className="mb-3">
   <label className="form-label">Telefon (optional)</label>
   <input 
@@ -537,7 +541,7 @@ export default function Donate() {
     </p>
 
     <div className="row g-3">
-      {/* Datum */}
+      {/* Datumauswahl */}
       <div className="col-md-6">
         <label className="form-label">Datum *</label>
         <input
@@ -553,7 +557,7 @@ export default function Donate() {
         )}
       </div>
 
-      {/* Zeitfenster */}
+      {/* Zeitfensterauswahl */}
       <div className="col-md-6">
         <label className="form-label">Zeitfenster *</label>
         <select
@@ -589,7 +593,7 @@ export default function Donate() {
   </div>
 )}
 
-        {/* -------------------------------- STEP 7 – Checkout / Übersicht -------------------------------- */}
+        {/* 7.Step */}
         {step === 7 && (
           <div className="checkout-card">
             <h2 className="h4 text-center mb-3">Bitte überprüfe deine Angaben</h2>
@@ -602,7 +606,7 @@ export default function Donate() {
               <h5 className="summary-title underline">Kleidung</h5>
               <ul className="list-unstyled">
                 {Object.entries(clothing)
-                  .filter(([_, count]) => count > 0)
+                  .filter(([, count]) => count > 0)
                   .map(([id, count]) => (
                     <li key={id} className="mb-1">
                       <strong>
@@ -617,7 +621,7 @@ export default function Donate() {
               <h5 className="summary-title mt-4 underline">Krisengebiet</h5>
               <p>{REGIONS.find(r => r.id === selectedRegion)?.label}</p>
 
-              {/* Übergabe */}
+              {/* Übergabeart */}
               <h5 className="summary-title mt-4 underline">Übergabe</h5>
 
               {pickupType === 'abholung' ? (
@@ -625,7 +629,7 @@ export default function Donate() {
                   <p>
                     <strong>Art:</strong> Abholung
                   </p>
-                  {/* date/time aktuell leer, kannst du noch ergänzen */}
+                  {/* Datumangabe */}
                   {date && (
                     <p><strong>Datum:</strong> {formatGermanDate(date)}</p>
                   )}
@@ -657,7 +661,7 @@ export default function Donate() {
               )}
             </div>
 
-            {/* Buttons */}
+            {/* Button weiter */}
             <div className="d-flex justify-content-between mt-4">
               <button
                 className="btn btn-back"
@@ -680,7 +684,7 @@ export default function Donate() {
           </div>
         )}
 
-        {/* -------------------------------- STEP 8 — DANKE -------------------------------- */}
+        {/* Step 8. */}
         {step === 8 && (
           <div className="step-card-final text-center">
             <h2 className="h3 mb-3 text-dark">Danke für deine Kleiderspende!</h2>

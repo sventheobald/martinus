@@ -82,14 +82,14 @@ export default function Home() {
   }}
 >
 
-  {/* Card-Layout wie beim ersten Hero */}
+  
   <div
     className="hero-card p-4 shadow position-relative"
     style={{
       maxWidth: '500px',
     margin: '2rem',
-    backgroundColor: 'rgba(255, 255, 255, 0.6)', // halbtransparent wie oben
-    backdropFilter: 'blur(4px)',                   // sanftes Glas-Gefühl (optional)
+    backgroundColor: 'rgba(255, 255, 255, 0.6)', 
+    backdropFilter: 'blur(4px)',                   
     border: 'none', 
     marginTop: '40px'
     }}

@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 import logo from '../images/logo_final.png'
 
 function Header() {
-  const [shrink, setShrink] = useState(false)        // Logo verkleinern
-  const [hideLinks, setHideLinks] = useState(false)  // Nav-Links verstecken
+  const [shrink, setShrink] = useState(false)        // Navbar schrumpfen
+  const [hideLinks, setHideLinks] = useState(false)  // Links ausblenden
   const lastY = useRef(0)
-  const HIDE_AFTER = 20; // statt 120
+  const HIDE_AFTER = 20; 
   useEffect(() => {
     lastY.current = window.scrollY;
   
@@ -18,11 +18,11 @@ function Header() {
   
       setShrink(y > 60);
   
-      // sanftere Schwelle
+      
       if (scrollingDown && y > 120 && !atBottom) {
-        setHideLinks(true);      // runter -> ausblenden
+        setHideLinks(true);      
       } else if (!scrollingDown) {
-        setHideLinks(false);     // hoch -> wieder einblenden
+        setHideLinks(false);     
       }
   
       lastY.current = y;
@@ -39,7 +39,7 @@ function Header() {
       }`}
     >
       <div className="container-fluid">
-        {/* Logo bleibt immer sichtbar */}
+        
         <div id="logo-area" className="position-relative d-flex align-items-center">
           <NavLink className="navbar-brand d-flex align-items-center" to="/">
             <img
@@ -51,7 +51,7 @@ function Header() {
             />
           </NavLink>
   
-          {/* Dropdown unter Logo */}
+          
           <div className={`logo-dropdown ${!shrink ? 'd-none' : ''}`}>
             <ul>
               <li><NavLink to="/donate">Spenden</NavLink></li>
@@ -62,7 +62,7 @@ function Header() {
           </div>
         </div>
   
-        {/* Menü-Block, der verschwindet */}
+        
         <div className={`nav-section ${hideLinks ? 'nav-section--hidden' : ''}`}>
           <button
             className="navbar-toggler"
