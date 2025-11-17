@@ -13,15 +13,15 @@ export default function Footer() {
             <h5 className="text-dark mb-3">Kontakt</h5>
 
             <p className="mb-2">
-              📧 <strong>Email:</strong> spenden@martinus.de
+              <strong>Email:</strong> spenden@martinus.de
             </p>
 
             <p className="mb-2">
-              ☎️ <strong>Telefon:</strong> 0761 / 32 16 8
+              <strong>Telefon:</strong> 0761 / 32 16 8
             </p>
 
             <p className="mb-2">
-              📍 <strong>Adresse:</strong><br />
+              <strong>Adresse:</strong><br />
               Waldstraße 12<br />
               79104 Freiburg
             </p>
