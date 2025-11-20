@@ -159,7 +159,16 @@ export default function Donate() {
     setClothingError('')
     setPlz('')
     setPickupType('')
-    setAbholAdresse({ street: '', houseNumber: '', zip: '', city: '' })
+    setAbholAdresse({
+      firstName: "",
+      lastName: "",
+      phone: "",
+      street: "",
+      houseNumber: "",
+      zip: "",
+      city: ""
+    });
+
     setErrors({})
     setDate('')
     setTimeWindow('')
@@ -360,7 +369,7 @@ export default function Donate() {
                   className="select-card"
                   onClick={() => {
                     setPickupType('lieferung')
-                    setStep(6) 
+                    setStep(7) 
                   }}
                 >
                   <House size={50} className="mb-3" />
@@ -666,7 +675,7 @@ export default function Donate() {
               <button
                 className="btn btn-back"
                 onClick={() => {
-                  if (pickupType === 'abholung') setStep(5)
+                  if (pickupType === 'abholung') setStep(6)
                   else setStep(4)
                 }}
               >
