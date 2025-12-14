@@ -78,7 +78,7 @@ export default function Donate() {
     <div className="invalid-feedback d-block">{dateError}</div>
   )}
 
-  // Helper Funktionen
+  // Hilfsfunktionen
   const hasClothing = Object.values(clothing).some(v => v > 0)
   const zipPrefix = plz.slice(0, 2)
   const canPickup = zipPrefix === OFFICE_ZIP_PREFIX
